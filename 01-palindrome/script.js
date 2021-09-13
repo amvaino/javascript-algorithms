@@ -15,19 +15,15 @@
 
 function palindrome(str) {
     // Напишите код здесь
-    function palindrome(str) {
-        if (!str) return true;
-        else {
-            let res;
-            for (let i = 0; i < str.length; i++) {
-                res =
-                    str.toLowerCase()[i] ===
-                    str.toLowerCase()[str.length - i - 1];
-                if (!res) break;
-            }
-            return res;
-        }
+    let res;
+    for (let i = 0; i < str.length; i++) {
+        res = str.toLowerCase()[i] === str.toLowerCase()[str.length - i - 1];
+        if (!res) break;
     }
+    if (!str) {
+        return true;
+    }
+    return res;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
