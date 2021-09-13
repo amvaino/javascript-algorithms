@@ -15,15 +15,15 @@
 
 function palindrome(str) {
     // Напишите код здесь
-    let res;
+    let resume;
     for (let i = 0; i < str.length; i++) {
-        res = str.toLowerCase()[i] === str.toLowerCase()[str.length - i - 1];
-        if (!res) break;
+        resume = str.toLowerCase()[i] === str.toLowerCase()[str.length - i - 1];
+        if (!resume) break;
     }
     if (!str) {
         return true;
     }
-    return res;
+    return resume;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
