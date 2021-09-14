@@ -10,14 +10,16 @@
  */
 
 function findVowels(str) {
-    let count = 0;
-    const vowels = ["а", "я", "о", "ё", "у", "ю", "ы", "и", "э", "е"];
-    for (let char of str.toLowerCase()) {
-        if (vowels.includes(char)) {
-            count += 1;
+    let count = 0; //счетчик
+    const vowels = ["а", "я", "о", "ё", "у", "ю", "ы", "и", "э", "е"]; //массив гласных
+    for (let letter of str.toLowerCase()) {
+        //в нижний регистр
+        if (vowels.includes(letter)) {
+            // если в массиве vowels .includes (определяет, содержит ли массив определённый элемент)
+            count += 1; //счетчик будет 1 или прибавлять к счетчику1
         }
     }
-    return count;
+    return count; // вернуть счетчик
     // Напишите код здесь
 }
 
