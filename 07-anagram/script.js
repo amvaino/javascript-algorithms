@@ -5,14 +5,14 @@
  * Напишите функцию, проверяющую, являются ли две строки анаграммами друг друга
  * (регистр букв не имеет значения). Для простоты примите, что в этих строках
  * нет пробелов и знаков препинания.
- * 
-*/
+ *
+ */
 
-function anagram(str1, str2) {
-    // Напишите код здесь
-}
+const anagram = (str1, str2) =>
+    [...str1.toUpperCase()].sort().join() ===
+        [...str2.toUpperCase()].sort().join() &&
+    [...str2.toUpperCase()].join() != [...str1.toUpperCase()].join();
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
-
-console.log(anagram('finder', 'Friend')); // true
-console.log(anagram('hello', 'bye')); // false
+console.log(anagram("hello", "bye")); // false
+console.log(anagram("finder", "Friend")); // true
