@@ -5,11 +5,24 @@
  * и целое число num. Функция должна вернуть true, если в переданном массиве
  * есть какие-то два числа, чья сумма равна num. Если же такой пары чисел нет,
  * функция должна вернуть false.
- * 
-*/
+ *
+ */
 
 function sumOfTwo(arr, sum) {
     // Напишите код здесь
+    let red = false;
+
+    arr.forEach(function (a) {
+        switch (true) {
+            case arr.indexOf(sum - a) >= 0 &&
+                sum - a !== arr[a - 1] &&
+                sum - a === arr[a + 1]:
+                red = true;
+
+                break;
+        }
+    });
+    return red;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
