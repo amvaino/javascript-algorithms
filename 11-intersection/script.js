@@ -9,7 +9,7 @@
 
 function intersection(arr1, arr2) {
     let arrBoth = true;
-    let res = [];
+    const res = [];
     arr1.every(function (a) {
         //every() проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции
         ans1 = arr2.includes(a);
@@ -17,7 +17,7 @@ function intersection(arr1, arr2) {
         return true;
     });
     // Напишите код здесь
-    return res;
+    return Array.from(new Set(res));
 }
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
