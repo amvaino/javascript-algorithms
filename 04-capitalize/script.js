@@ -9,7 +9,7 @@
 function capitalize(str) {
     // Напишите код здесь
     //if (!str) return str;
-    let mas = str.split(" ");
+    const mas = str.split(" ");
     let arr = [];
     mas.forEach(function (i) {
         let oneLetter = i.slice(0, 1);
